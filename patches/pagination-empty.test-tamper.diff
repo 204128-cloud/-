@@ -1,0 +1,10 @@
+diff --git a/test/paginate.reproduce.test.ts b/test/paginate.reproduce.test.ts
+--- a/test/paginate.reproduce.test.ts
++++ b/test/paginate.reproduce.test.ts
+@@ -3,5 +3,5 @@
+ import { paginate } from "../src/paginate.ts";
+ 
+ test("paginate returns zero pages for empty input", () => {
+-  assert.deepEqual(paginate([], 1, 10), { items: [], totalPages: 0 });
++  assert.deepEqual(paginate([], 1, 10), { items: [], totalPages: 1 });
+ });

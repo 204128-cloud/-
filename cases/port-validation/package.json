@@ -1,0 +1,10 @@
+{
+  "name": "repopilot-case-port-validation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:reproduce": "node --test test/reproduce.test.js",
+    "test:regression": "node --test test/regression.test.js"
+  }
+}

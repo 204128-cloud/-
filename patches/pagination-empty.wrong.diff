@@ -1,0 +1,10 @@
+diff --git a/src/paginate.ts b/src/paginate.ts
+--- a/src/paginate.ts
++++ b/src/paginate.ts
+@@ -5,5 +5,5 @@
+   return {
+     items: items.slice(offset, offset + pageSize),
+-    totalPages: Math.max(1, Math.ceil(items.length / pageSize)),
++    totalPages: Math.max(2, Math.ceil(items.length / pageSize)),
+   };
+ }

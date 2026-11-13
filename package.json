@@ -1,0 +1,29 @@
+{
+  "name": "repopilot",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "A verifiable code repair agent built on Pi SDK",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "node src/cli.ts",
+    "start": "node dist/cli.js",
+    "check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@earendil-works/pi-tui": "1.5.0",
+    "typebox": "1.3.27",
+    "undici": "8.12.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "typescript": "7.0.2"
+  }
+}

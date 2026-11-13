@@ -1,0 +1,16 @@
+diff --git a/src/truncate-text.js b/src/truncate-text.js
+index d2bedec078b7d19011f7df4401f5383f280e7394..c150b0dc2df6c7e6a4c6b8bb970a61c333c79ef4 100644
+--- a/src/truncate-text.js
++++ b/src/truncate-text.js
+@@ -1,8 +1,9 @@
+ export function truncateText(text, maxLength, suffix = "…") {
+   if (typeof text !== "string" || typeof suffix !== "string") throw new TypeError("Text and suffix must be strings");
+   if (!Number.isInteger(maxLength) || maxLength < 0) throw new RangeError("Length must be a nonnegative integer");
+-  if (text.length <= maxLength) return text;
++  const textPoints = Array.from(text);
++  if (textPoints.length <= maxLength) return text;
+   const suffixPoints = Array.from(suffix);
+   if (suffixPoints.length >= maxLength) return suffixPoints.slice(0, maxLength).join("");
+-  return text.slice(0, maxLength - suffixPoints.length) + suffix;
++  return textPoints.slice(0, maxLength - suffixPoints.length).join("") + suffix;
+ }

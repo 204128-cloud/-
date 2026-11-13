@@ -1,0 +1,12 @@
+{
+  "id": "regexp-unicode-001",
+  "repoPath": "D:\\YOUR_REPOSITORY",
+  "baseCommit": "REPLACE_WITH_FULL_COMMIT_SHA",
+  "issue": "escapeStringRegexp 转义包含连字符的文本后，结果用于带 u 标志的 RegExp 会抛出 Invalid escape。预期可在 Unicode 模式下构造正则并完整匹配原始文本；保留非 Unicode 字符类中连字符的字面含义、其他元字符转义和原有参数校验。",
+  "reproduceScript": "test:reproduce",
+  "regressionScript": "test:regression",
+  "expectedFailure": "escaped hyphens compile and match literally in Unicode mode",
+  "allowedPaths": [
+    "src/index.js"
+  ]
+}

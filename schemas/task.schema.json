@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RepoPilot Task v1",
+  "description": "基本格式校验；仓库、提交、脚本、修改范围与测试结果还需运行前检查。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "repoPath", "baseCommit", "issue", "reproduceScript", "regressionScript", "expectedFailure", "allowedPaths"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "not": { "pattern": "\\s" }
+    },
+    "repoPath": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "baseCommit": { "type": "string", "minLength": 40, "maxLength": 40, "pattern": "^[0-9a-f]{40}$" },
+    "issue": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "reproduceScript": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "not": { "pattern": "\\s" }
+    },
+    "regressionScript": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "not": { "pattern": "\\s" }
+    },
+    "expectedFailure": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "allowedPaths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": "\\S" }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.repopilot/
+.env
+.env.*
+*.log
+auth.json
+models-store.json
+
+# Machine-specific configuration and historical runnable tasks
+/config/models.json
+/tasks/*.json
+!/tasks/*.template.json
+/benchmarks/smoke.json

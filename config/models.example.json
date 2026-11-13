@@ -1,0 +1,24 @@
+{
+  "providers": {
+    "dashscope": {
+      "baseUrl": "https://your-workspace.example.invalid/compatible-mode/v1",
+      "api": "openai-completions",
+      "apiKey": "${DASHSCOPE_API_KEY}",
+      "compat": {
+        "supportsStore": false,
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false,
+        "maxTokensField": "max_tokens",
+        "thinkingFormat": "qwen"
+      },
+      "models": [
+        {
+          "id": "qwen3.7-plus",
+          "name": "Qwen3.7 Plus (Bailian Beijing)",
+          "reasoning": true,
+          "input": ["text", "image"]
+        }
+      ]
+    }
+  }
+}

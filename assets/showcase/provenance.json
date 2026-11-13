@@ -1,0 +1,62 @@
+{
+  "kind": "terminal_showcase",
+  "captureMethod": "production TUI and Pi SDK; headless terminal ANSI cells rendered to PNG",
+  "modelService": "local_http_simulation",
+  "realBailianRequests": 0,
+  "terminal": {
+    "columns": 128,
+    "rows": 42
+  },
+  "environment": {
+    "platform": "win32",
+    "node": "v26.13.0",
+    "piSdk": "1.5.0"
+  },
+  "sourceFingerprint": "3fb81bc8139bf20413801271d42d944e8aeb18f58f657113cc1e3e64e7652331",
+  "candidateSource": "patches/extended-v1/port-validation.qwen.diff",
+  "repairRunId": "repair-sldZiT",
+  "verification": {
+    "status": "resolved",
+    "tests": {
+      "before-reproduce": {
+        "passed": 0,
+        "failed": 1
+      },
+      "before-regression": {
+        "passed": 8,
+        "failed": 0
+      },
+      "after-reproduce": {
+        "passed": 1,
+        "failed": 0
+      },
+      "after-regression": {
+        "passed": 8,
+        "failed": 0
+      }
+    },
+    "replayVerified": true
+  },
+  "images": [
+    {
+      "file": "01-welcome.png",
+      "sha256": "a5c302665efb9ec88e047cbdaf8eead8c0c9332bef37b56b969ba9a6f304fbcb",
+      "bytes": 38848
+    },
+    {
+      "file": "02-image-chat.png",
+      "sha256": "ae7df664a5a496ea5a0c648f93f9fba3c1d910287ef3ea8fba415f8f82e29cad",
+      "bytes": 51600
+    },
+    {
+      "file": "03-patch-review.png",
+      "sha256": "ea9158a34898b4c398d5a6005ee894bffae0c9013df79d1084d40a420fabe1d4",
+      "bytes": 53970
+    },
+    {
+      "file": "04-verification.png",
+      "sha256": "8247c22edb2c344925f2301fdb83ac08146dabb14c2568da5d9369767a0a6a55",
+      "bytes": 55815
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "extended-v1",
+  "provenance": "Self-authored constructed development cases; not external defects or a hidden holdout set.",
+  "cases": [
+    {
+      "name": "port-validation",
+      "id": "port-validation-001",
+      "expectedFailure": "parsePort rejects non-decimal content instead of accepting a numeric prefix",
+      "issue": "parsePort 对字符串使用数字前缀解析，错误接受 3000ms、80.5、1e3 等非完整十进制端口。字符串只允许前后空白和十进制数字，可有前导零；合法整数端口为 1 至 65535。无效字符串及非法数值须抛出 RangeError，不支持的类型抛出 TypeError；保持原有合法输入和边界行为。",
+      "files": {
+        "CASE.md": "79795b3a91972e4a710ed6ea5b07aa8074629cc183481e44bccfa76beafc6dfc",
+        "package-lock.json": "a1abc91d85bf6b24352329624590dbe64a1bfcb206e90df6b9f647c50c96e45d",
+        "package.json": "8d825154e22f836ca8e868c188f9984d518b4b5f4365162091d83feec03d2915",
+        "src/parse-port.js": "cba1802e8371faaf3033133faeed0b1ca7d54962960c7d628048d58ee74384d2",
+        "test/regression.test.js": "29df87bcc9739f664b474c986e95a23d4d528212b3c45972f9d2643fe2a64cc9",
+        "test/reproduce.test.js": "4fd3bb5fdfc38d16e44a05ae07fd5b3262edc73eead5181ce137d4a62a0e2edc"
+      },
+      "allowedPaths": [
+        "src/parse-port.js"
+      ]
+    },
+    {
+      "name": "stable-priority-sort",
+      "id": "stable-priority-sort-001",
+      "expectedFailure": "equal-priority items retain their original input order",
+      "issue": "sortByPriority 应返回按 priority 降序排列的新数组；相同优先级须保留原输入顺序，目前却按 id 重排。保持输入数组及对象字段不变，返回值保留原对象引用，不丢失重复 ID，并继续支持负数、零和有限小数优先级。输入对象具有字符串 id 和有限数值 priority，本任务不扩展其他输入类型校验。",
+      "files": {
+        "CASE.md": "040bdbaca1718c2d1786f3f7eb557c18051fd63ee47fa76049259ac3a665aab9",
+        "package-lock.json": "1917eb5702b95821f575a33e652f9dcf6f7f0eb1bfcce498f2a653e192bf9329",
+        "package.json": "ecd6483dacc7ed7f06a010f43ac0e9cff512320e147564a7131456f90a17a126",
+        "src/sort-by-priority.js": "58e4b499a43db07695dcadbc3131fec91938280a24fe5ed8fb44fefc9ea69620",
+        "test/regression.test.js": "ccbed4148ba1bcc6c650bec60a7fdd84bef7e404b79dc2cdc61e25c5f713b030",
+        "test/reproduce.test.js": "7e3502d990960a8d7448184ac31af75740533fdb86a3c96ad821e8a0b87cadd2"
+      },
+      "allowedPaths": [
+        "src/sort-by-priority.js"
+      ]
+    },
+    {
+      "name": "truncate-codepoints",
+      "id": "truncate-codepoints-001",
+      "expectedFailure": "truncateText counts Unicode code points without splitting surrogate pairs",
+      "issue": "truncateText(text, maxLength, suffix=\"…\") 应按 Unicode code point 限制最终输出长度（含后缀），目前主体字符串按 UTF-16 计数和切片，导致 A😀BC 截为长度 3 时拆开代理对，且把本已满足 code point 限制的文本误截断。保持未超长文本不变；超长时为后缀预留预算，后缀过长则裁剪后缀。保留空后缀、零长度、参数校验与组合标记逐 code point 计数的约定；不实现字素簇或显示宽度截断。",
+      "files": {
+        "CASE.md": "0eb8b7a5fff856e2e2e3c332ecb6313885ec052e5b63749b78e94f80d9fcef90",
+        "package-lock.json": "d5b57a41dbd948df476b1443b3b2ee9038d050d06b06ae23c06401e658301956",
+        "package.json": "013ecfbf5c4acc89016468c8a9ed3b0f6cd19d2e4c80889923b9a09ddbb487aa",
+        "src/truncate-text.js": "479c99df4ba193828e120da83ab22455426ff44c8d01aed06c725234562d2208",
+        "test/regression.test.js": "7d4d93c5155c4ea8fe9b7acefe2937cef4f22dbee98793141c42bc74bdb593be",
+        "test/reproduce.test.js": "7ebcd6f30bfaa48a76e2eefac290be633a8e2bfd3a9d64d123c185209cafdc9f"
+      },
+      "allowedPaths": [
+        "src/truncate-text.js"
+      ]
+    }
+  ]
+}

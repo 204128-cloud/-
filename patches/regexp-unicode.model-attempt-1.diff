@@ -1,0 +1,12 @@
+diff --git a/src/index.js b/src/index.js
+index 58217a4efa3c835c532499a3dad887017dc70a6b..1f43725857c301cf2fdb3980fae993dda6d928e2 100644
+--- a/src/index.js
++++ b/src/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-const matchOperatorsRegex = /[|\\{}()[\]^$+*?.-]/g;
++const matchOperatorsRegex = /[|\\{}()[\]^$+*?./-]/g;
+ 
+ module.exports = string => {
+ 	if (typeof string !== 'string') {

@@ -1,0 +1,10 @@
+{
+  "id": "pagination-empty-001",
+  "repoPath": "D:\\YOUR_REPOSITORY",
+  "baseCommit": "REPLACE_WITH_FULL_COMMIT_SHA",
+  "issue": "paginate(items, page, pageSize) 处理空数组时返回 totalPages=1。对 paginate([], 1, 10)，预期返回 {items: [], totalPages: 0}；保持原有非空分页行为与参数校验。",
+  "reproduceScript": "test:reproduce",
+  "regressionScript": "test:regression",
+  "expectedFailure": "paginate returns zero pages for empty input",
+  "allowedPaths": ["src/paginate.ts"]
+}

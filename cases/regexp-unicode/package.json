@@ -1,0 +1,12 @@
+{
+  "name": "repopilot-regexp-unicode-case",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "license": "MIT",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "test:reproduce": "node --test test/reproduce.test.cjs",
+    "test:regression": "node --test test/regression.test.cjs"
+  }
+}

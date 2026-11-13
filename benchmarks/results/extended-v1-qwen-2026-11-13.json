@@ -1,0 +1,317 @@
+{
+  "kind": "real_equal_budget_evaluation",
+  "sourceRunId": "bench-ahKZof",
+  "suiteId": "extended-v1",
+  "suiteHash": "30cc247cd7e645ba8ab07f2ce696a045e5b541dc4ce42dea31bd82b2b89f1deb",
+  "model": "dashscope/qwen3.7-plus",
+  "startedAt": "2026-11-13T05:13:14.098Z",
+  "finishedAt": "2026-11-13T06:08:54.557Z",
+  "budgets": {
+    "noFeedback": 3,
+    "feedback": 3
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "programHashes": {
+    "code": "15ee31b878caa0465326307c5302eb42c87008bf0fdbc603f963a010ae808fd0",
+    "schemas": "130fcc7003e753b6f645e4e38c341d97c41c13a49d86289155f403efcef8ebf0",
+    "package": "9d40a79fe365d1ddf2e579937c11834fc44a36b396f25c0c2dc930c2e8fad842",
+    "packageLock": "111914063aad73338df4bd32e65d73138a2cbdd1d0f4ebc1120e8d15e17980a0"
+  },
+  "summary": {
+    "plannedTasks": 3,
+    "processedTasks": 3,
+    "actualModelRequests": 6,
+    "noFeedback": {
+      "statusCounts": {
+        "resolved": 3,
+        "unresolved": 0,
+        "error": 0,
+        "not_reproduced": 0,
+        "awaiting_review": 0,
+        "not_run": 0
+      },
+      "modelRequests": 3,
+      "wallMs": 2071415.6634999998,
+      "reviewWaitMs": 1997595.0561000002,
+      "activeMs": 73820.60739999951
+    },
+    "feedback": {
+      "statusCounts": {
+        "resolved": 3,
+        "unresolved": 0,
+        "error": 0,
+        "not_reproduced": 0,
+        "awaiting_review": 0,
+        "not_run": 0
+      },
+      "modelRequests": 3,
+      "wallMs": 1268692.5211999998,
+      "reviewWaitMs": 1191215.3601,
+      "activeMs": 77477.16110000003
+    },
+    "feedbackRetriesObserved": 0
+  },
+  "tasks": [
+    {
+      "taskId": "port-validation-001",
+      "baseCommit": "e509bae11b79d96cc77327e96a4ec4a3188aa200",
+      "taskHash": "de34e588f2a0c1fee5ac8b7642180f455fcefacb12f4b22d1b65ff37c91e040d",
+      "order": [
+        "no_feedback",
+        "feedback"
+      ],
+      "sourceFingerprint": "ea44c6e9af6ddf14e32cdbd0bc40ee45d10e6a0f4266aad886521fd1f27db52a",
+      "basePromptHash": "3a354377f4253e7333f39980c4f51e1554eda0f4d3133a2df713fc54a75d026e",
+      "noFeedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 29689.60420000006,
+        "reviewWaitMs": 901929.7593,
+        "wallMs": 931619.3635000001,
+        "repairRunId": "repair-z8ZXIW",
+        "verificationRunId": "baseline-RJa9Vs",
+        "candidateHash": "87c84455fa70cd71dada5c92701598e661d2913374ed50eb7ef1dfab5dc3b56f",
+        "patchHash": "87c84455fa70cd71dada5c92701598e661d2913374ed50eb7ef1dfab5dc3b56f",
+        "patchArtifact": "patches/extended-v1/port-validation.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      },
+      "feedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 29608.491299999994,
+        "reviewWaitMs": 426912.53350000014,
+        "wallMs": 456521.02480000013,
+        "repairRunId": "repair-niVgib",
+        "verificationRunId": "baseline-CGwiX1",
+        "candidateHash": "87c84455fa70cd71dada5c92701598e661d2913374ed50eb7ef1dfab5dc3b56f",
+        "patchHash": "87c84455fa70cd71dada5c92701598e661d2913374ed50eb7ef1dfab5dc3b56f",
+        "patchArtifact": "patches/extended-v1/port-validation.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      }
+    },
+    {
+      "taskId": "stable-priority-sort-001",
+      "baseCommit": "cfcdc3e50279400d0e926e3d967afc0d2e7434b1",
+      "taskHash": "52e3899094c6990b60bf3b10dc4f8dd0738a0fb33ef4534185fb25628fb38501",
+      "order": [
+        "feedback",
+        "no_feedback"
+      ],
+      "sourceFingerprint": "56d6c870fbbdccdec29977fbea8d93f6150c4f17360582b9a3ca2fb39f6e0ff1",
+      "basePromptHash": "56845e166f8cf1a3aad365dc61d3c76ea8c76591320875864f057062ab904b96",
+      "noFeedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 22445.146299999906,
+        "reviewWaitMs": 626508.8169,
+        "wallMs": 648953.9631999999,
+        "repairRunId": "repair-E1X0Wj",
+        "verificationRunId": "baseline-4gFV1w",
+        "candidateHash": "6869e913ff0ef8dc3e4a54204184abb53478bdb762bb8d0a562a65e0d0439f99",
+        "patchHash": "6869e913ff0ef8dc3e4a54204184abb53478bdb762bb8d0a562a65e0d0439f99",
+        "patchArtifact": "patches/extended-v1/stable-priority-sort.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      },
+      "feedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 20085.55749999988,
+        "reviewWaitMs": 545706.6137000001,
+        "wallMs": 565792.1712,
+        "repairRunId": "repair-m0orgD",
+        "verificationRunId": "baseline-t2m5Ux",
+        "candidateHash": "6869e913ff0ef8dc3e4a54204184abb53478bdb762bb8d0a562a65e0d0439f99",
+        "patchHash": "6869e913ff0ef8dc3e4a54204184abb53478bdb762bb8d0a562a65e0d0439f99",
+        "patchArtifact": "patches/extended-v1/stable-priority-sort.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      }
+    },
+    {
+      "taskId": "truncate-codepoints-001",
+      "baseCommit": "56de2f5e7d099c6a2178f4119fcf37b5888e8f6a",
+      "taskHash": "d97faaf3167303b25c74af4b4095f4761ee8642b77f00ce9db0b794cf17e3734",
+      "order": [
+        "no_feedback",
+        "feedback"
+      ],
+      "sourceFingerprint": "1df8e1f5e1480ce30abf966ad48aa5195b4dc4ab6ae41780dd6f09de7f95f09a",
+      "basePromptHash": "c6f123524cd22a8ed1b82086e876ffa0cd665229d7ee43d4e80ed5a816371320",
+      "noFeedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 21685.856899999548,
+        "reviewWaitMs": 469156.47990000015,
+        "wallMs": 490842.3367999997,
+        "repairRunId": "repair-bAUDxA",
+        "verificationRunId": "baseline-ETEslE",
+        "candidateHash": "4c2b97af477ffa2859681f00f41661a7013a801054e291d90a00356b694e445f",
+        "patchHash": "4c2b97af477ffa2859681f00f41661a7013a801054e291d90a00356b694e445f",
+        "patchArtifact": "patches/extended-v1/truncate-codepoints.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      },
+      "feedback": {
+        "status": "resolved",
+        "modelRequests": 1,
+        "attempts": 1,
+        "feedbackIncluded": false,
+        "activeMs": 27783.112300000153,
+        "reviewWaitMs": 218596.2128999997,
+        "wallMs": 246379.32519999985,
+        "repairRunId": "repair-uLFzxF",
+        "verificationRunId": "baseline-nNXTE1",
+        "candidateHash": "4c2b97af477ffa2859681f00f41661a7013a801054e291d90a00356b694e445f",
+        "patchHash": "4c2b97af477ffa2859681f00f41661a7013a801054e291d90a00356b694e445f",
+        "patchArtifact": "patches/extended-v1/truncate-codepoints.qwen.diff",
+        "tests": {
+          "before-reproduce": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          },
+          "before-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-reproduce": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "after-regression": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "replayVerified": true
+      }
+    }
+  ],
+  "interpretation": "All six arms resolved on their first candidate. No failure feedback was sent; this run does not establish a feedback advantage or general repair rate."
+}

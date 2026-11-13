@@ -1,0 +1,9 @@
+diff --git a/src/sort-by-priority.js b/src/sort-by-priority.js
+index 0bcc90e201da79c5f790f2a9b52833bcfe1588f1..bc4595058582df27b06d8d20e1d8523cdb25fe1e 100644
+--- a/src/sort-by-priority.js
++++ b/src/sort-by-priority.js
+@@ -1,3 +1,3 @@
+ export function sortByPriority(items) {
+-  return [...items].sort((left, right) => right.priority - left.priority || left.id.localeCompare(right.id));
++  return [...items].sort((left, right) => right.priority - left.priority);
+ }

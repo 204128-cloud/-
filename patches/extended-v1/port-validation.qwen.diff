@@ -1,0 +1,22 @@
+diff --git a/src/parse-port.js b/src/parse-port.js
+index dfb414b6c2e2b69b921de7ac9f44d6189ecabc07..274f3ca261176a66604baa0057ea7f48d7c3e761 100644
+--- a/src/parse-port.js
++++ b/src/parse-port.js
+@@ -2,7 +2,16 @@ export function parsePort(value) {
+   if (typeof value !== "string" && typeof value !== "number") {
+     throw new TypeError("Port must be a string or number");
+   }
+-  const port = typeof value === "string" ? Number.parseInt(value, 10) : value;
++  let port;
++  if (typeof value === "string") {
++    const trimmed = value.trim();
++    if (!/^\d+$/.test(trimmed)) {
++      throw new RangeError("Port must be between 1 and 65535");
++    }
++    port = Number.parseInt(trimmed, 10);
++  } else {
++    port = value;
++  }
+   if (!Number.isInteger(port) || port < 1 || port > 65535) {
+     throw new RangeError("Port must be between 1 and 65535");
+   }

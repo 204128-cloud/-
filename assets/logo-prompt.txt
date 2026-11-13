@@ -1,0 +1,5 @@
+Generated with the built-in image_gen tool for RepoPilot on 2026-11-11.
+
+Use case: logo-brand. Create one polished original app icon for RepoPilot, a code-repair AI terminal assistant. The app's established interface uses cyan accents on a very dark blue-black background. Design a bold, simple geometric symbol that combines two coding chevrons with a forward-pointing pilot/navigation motif into one coherent memorable mark. Cyan and icy white on a uniform dark blue-black background. Large simple silhouette, chunky clean edges, extremely legible when reduced to a tiny terminal pixel image. Centered compact icon with generous equal padding in a square composition. Flat vector-like raster artwork with subtle restrained depth, professional developer-tool brand. Icon only, no words, no letters, no mockup, no border, no decorative scene. Intended to appear on a terminal application's first-launch welcome screen.
+
+logo.png preserves the generated image. logo-terminal.json contains sampled RGB values for rendering the same image with terminal half-block characters.
