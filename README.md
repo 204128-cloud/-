@@ -12,6 +12,8 @@ RepoPilot 实现了故障基准复现、授权源码筛选、结构化编辑校�
 
 [逐步功能检查](docs/TESTING.md) · [最终功能验收](docs/FINAL_ACCEPTANCE.md)
 
+[120 问面试问答手册](docs/INTERVIEW_QA.md)：项目介绍、源码实现、Agent 工具、多模态、独立验收、评测边界和现场追问。
+
 首次克隆请先按 [发布与迁移说明](docs/PUBLISHING.md) 从 `config/models.example.json` 创建本地配置；真实调用前填写自己的百炼兼容接口地址。无密钥演示使用 `scripts/prepare-extended-cases.mjs` 生成当前机器上的任务。文档后面的旧分页 / Unicode 命令用于已准备历史任务的本机，机器绑定任务与旧 `smoke.json` 不随仓库提交。[来源声明](NOTICE.md)
 
 ## 界面展示
@@ -342,7 +344,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\项目\RepoPilot\Star
 
 ## 当前任务摘要
 
-- 当前目标是采用 MIT 许可证，将已验收版本提交到 `204128-cloud/-` 的 main 分支。
+- 当前目标是整理基于源码和实测记录的 120 问面试问答，帮助理解项目、练习演示并据实说明贡献与边界。
 - 核心约束为可信本地仓库、固定故障提交、具体源码白名单、实际测试证据和凭据不落盘。Git worktree 隔离文件改动，测试仍使用宿主进程权限。
 - 已确认使用 Pi SDK 和 Qwen 生成候选，宿主独立验收。词法定位最多选 3 个完整文件，用户上下文限 32 KiB，每次修复最多尝试 3 轮。
 - 现有功能包括 Pi 风格终端聊天、流式回复和取消、多行草稿、本地图片、会话保存恢复、消息排队与引导、任务向导、配置诊断、历史报告、候选审阅与修复验收。TUI 的 Ctrl+C 复制选中文字，Ctrl+Q 或 `/exit` 退出；逐行 `chat` 保持原按键行为。
